@@ -14,8 +14,6 @@
 
 ![00067f2c.png](./images/00067f2c.png)
 
-![82spnypt.png](./images/82spnypt.png)
-
 ![e28960be.jpg](./images/e28960be.jpg)
 
 ![5df9fc5d.jpg](./images/5df9fc5d.jpg)
@@ -33,8 +31,6 @@
 ![c228995c.jpg](./images/c228995c.jpg)
 
 ![24a4d41e.png](./images/24a4d41e.png)
-
-![297eaaa7.png](./images/297eaaa7.png)
 
 ![02ef9b34.jpg](./images/02ef9b34.jpg)
 
@@ -61,8 +57,6 @@
 ![y597381n.png](./images/y597381n.png)
 
 ![a5d47f91.png](./images/a5d47f91.png)
-
-![4a598e2b.jpg](./images/4a598e2b.jpg)
 
 ![fce361d7.png](./images/fce361d7.png)
 
