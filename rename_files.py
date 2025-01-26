@@ -23,6 +23,11 @@ def rename_files():
         # Get the file extension
         name, ext = os.path.splitext(filename)
 
+        # Skip non-image files
+        if ext.lower() not in ["png", "jpg", "jpeg", "webp"]:
+            print(f"Skipping file: {filename}")
+            continue
+
         # Check if the filename matches the valid pattern
         if not valid_filename_pattern.fullmatch(name):
             # Generate a new random filename
