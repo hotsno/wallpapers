@@ -28,7 +28,7 @@ jobs:
 
       # Step 4: Run the Python script
       - name: Run update_readme.py
-        run: python update_readme.py
+        run: python scripts/update_readme.py
 
       # Step 5: Check for changes
       - name: Check for changes
