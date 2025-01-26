@@ -1,13 +1,14 @@
-name: Rename Files
+name: Update README with Wallpapers
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Rename Files
+    types:
+      - completed
 
 jobs:
-  rename-files:
+  update-readme:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,14 +27,14 @@ jobs:
         run: pip install --upgrade pip
 
       # Step 4: Run the Python script
-      - name: Run rename_files.py
-        run: python ./scripts/rename_files.py
+      - name: Run update_readme.py
+        run: python update_readme.py
 
       # Step 5: Check for changes
       - name: Check for changes
         id: git_status
         run: |
-          git add .
+          git add README.md
           if git diff-index --quiet HEAD --; then
             echo "No changes to commit."
             echo "has_changes=false" >> $GITHUB_ENV
@@ -48,6 +49,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -m "Renamed files to match naming convention"
+          git commit -m "Update README with wallpapers"
           git push
 

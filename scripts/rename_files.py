@@ -10,12 +10,11 @@ def generate_random_string(length=8):
 # Regex pattern to match valid filenames
 valid_filename_pattern = re.compile(r'^[a-z0-9]{8}$')
 
-# Directory containing the images
-image_directory = "."
+os.chdir("images")
 
 # Rename files in the directory
 def rename_files():
-    for filename in os.listdir(image_directory):
+    for filename in os.listdir("."):
         # Skip directories
         if os.path.isdir(filename):
             continue
@@ -24,7 +23,7 @@ def rename_files():
         name, ext = os.path.splitext(filename)
 
         # Skip non-image files
-        if ext.lower() not in ["png", "jpg", "jpeg", "webp"]:
+        if ext.lower() not in [".png", ".jpg", ".jpeg", ".webp"]:
             print(f"Skipping file: {filename}")
             continue
 
